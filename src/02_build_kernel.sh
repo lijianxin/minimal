@@ -80,6 +80,9 @@ else
     # Enable the mixed EFI mode when building 64-bit kernel.
     echo "CONFIG_EFI_MIXED=y" >> .config
   fi
+
+  # Bootmagix setup input timeout
+  sed -i 's|int cnt = 30;|int cnt = 1;|g' arch/x86/boot/tty.c
 fi
 
 # Compile the kernel with optimization for 'parallel jobs' = 'number of processors'.
