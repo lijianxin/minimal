@@ -24,7 +24,7 @@
 #                    |
 #                    +--(2) /bin/sh (Alt + F4)
 
-echo -e "Welcome to \\e[1mMinimal \\e[32mLinux \\e[31mLive\\e[0m (/init)"
+echo -e "Welcome to \\e[1mBoot \\e[32mMagix \\e[31mLive\\e[0m (/init)"
 
 # Let's mount all core file systems.
 /etc/01_prepare.sh
@@ -32,8 +32,8 @@ echo -e "Welcome to \\e[1mMinimal \\e[32mLinux \\e[31mLive\\e[0m (/init)"
 # Print first message on screen.
 cat /etc/msg/init_01.txt
 
-# Wait 5 second or until any keybord key is pressed.
-read -t 5 -n1 -s key
+# Wait 1 second or until any keybord key is pressed.
+read -t 1 -n1 -s key
 
 if [ ! "$key" = "" ] ; then
   # Print second message on screen.
